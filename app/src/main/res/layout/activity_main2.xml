@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@drawable/forestground">
+
+    <!-- Feed Label -->
+    <TextView
+        android:id="@+id/feedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/feedProgress"
+        app:layout_constraintBottom_toTopOf="@+id/feedProgress"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Sleep Label -->
+    <TextView
+        android:id="@+id/sleepLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleep"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="@+id/sleepProgress"
+        app:layout_constraintBottom_toTopOf="@+id/sleepProgress"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Play Label -->
+
+    <!-- Feed Progress Bar -->
+    <TextView
+        android:id="@+id/playLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:text="Play"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/playProgress"
+        app:layout_constraintStart_toStartOf="@+id/playProgress" />
+
+    <ProgressBar
+        android:id="@+id/feedProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/feed_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedLabel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Sleep Progress Bar -->
+    <ProgressBar
+        android:id="@+id/sleepProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/sleep_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleepLabel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Play Progress Bar -->
+    <ProgressBar
+        android:id="@+id/playProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/play_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playLabel"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Feed ImageView -->
+    <ImageView
+        android:id="@+id/imageViewFeed"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/feed_image"
+        app:layout_constraintTop_toBottomOf="@+id/feedProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- Sleep ImageView -->
+    <ImageView
+        android:id="@+id/imageViewSleep"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sleep_image"
+        app:layout_constraintTop_toBottomOf="@+id/sleepProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- Play ImageView -->
+    <ImageView
+        android:id="@+id/imageViewPlay"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/play_image"
+        app:layout_constraintTop_toBottomOf="@+id/playProgress"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"/>
+
+    <!-- Dead ImageView -->
+    <ImageView
+        android:id="@+id/imageViewDead"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/dead_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+    <!-- Buttons -->
+
+    <Button
+        android:id="@+id/FEEDbtn"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="552dp"
+        android:backgroundTint="#52AA56"
+        android:text="FEED"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFeed" />
+
+    <Button
+        android:id="@+id/SLEEPbtn"
+        android:layout_width="94dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="544dp"
+        android:backgroundTint="#469C4A"
+        android:text="SLEEP"
+        app:layout_constraintStart_toStartOf="@+id/FEEDbtn"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewSleep" />
+
+    <Button
+        android:id="@+id/PLAYbtn"
+        android:layout_width="93dp"
+        android:layout_height="48dp"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="599dp" />
+
